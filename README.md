@@ -34,7 +34,7 @@ The frontend that consumes this API is **CineStage** (built separately, generate
 
 *A step-by-step walkthrough of how a movie gets its poster automatically: from the incoming request, through `MovieService` and `TmdbService`, out to the TMDB API over HTTP, and back into the database.*
 
-<!-- 🎥 PASTE TMDB FLOW VIDEO HERE -->
+[<!-- 🎥 PASTE TMDB FLOW VIDEO HERE -->](https://github.com/user-attachments/assets/3050a5f2-636e-4d91-9328-cb7da245d68e)
 
 ---
 
