@@ -26,7 +26,7 @@ The frontend that consumes this API is **CineStage** (built separately, generate
 
 *A full walkthrough of the layered architecture — Controllers → Services → Repositories → Database — and how each entity connects to the others.*
 
-<!-- 🎥 PASTE ARCHITECTURE WALKTHROUGH VIDEO HERE -->
+[<!-- 🎥 PASTE ARCHITECTURE WALKTHROUGH VIDEO HERE -->](https://github.com/user-attachments/assets/1e522e88-84a6-48eb-b531-6b0fdee271b8)
 
 ---
 
