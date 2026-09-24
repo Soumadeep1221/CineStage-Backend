@@ -11,7 +11,6 @@ import java.util.List;
 public interface BookingRepository extends JpaRepository<Booking, Long> {
 
     List<Booking> findByUserId(Long userId);
-    List<Booking> findByShowId(Long showId);
 
     @Query("SELECT s.id FROM Booking b JOIN b.bookedSeats s WHERE b.show.id = :showId AND b.status = 'CONFIRMED'")
     List<Long> findBookedSeatIdsByShowId(@Param("showId") Long showId);

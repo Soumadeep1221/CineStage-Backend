@@ -1,9 +1,7 @@
 package com.soumadeep.BMS_System.Controller;
 
 import com.soumadeep.BMS_System.DTO.SeatRequest;
-import com.soumadeep.BMS_System.DTO.ShowRequest;
 import com.soumadeep.BMS_System.Entity.Seat;
-import com.soumadeep.BMS_System.Entity.Show;
 import com.soumadeep.BMS_System.Service.SeatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
