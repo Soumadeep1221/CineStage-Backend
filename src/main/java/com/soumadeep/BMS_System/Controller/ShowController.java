@@ -49,6 +49,13 @@ public class ShowController {
         return ResponseEntity.ok(shows);
     }
 
+    @GetMapping("/screen/{screenId}/date")
+    public ResponseEntity<List<Show>>
+    getShowByScreenAndDate(@PathVariable Long screenId,@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate localDate) {
+        List<Show> shows = showService.getShowByScreenAndShowDate(screenId, localDate);
+        return ResponseEntity.ok(shows);
+    }
+
     @GetMapping("/screen/{screenId}")
     public ResponseEntity<List<Show>> getShowsByScreen(@PathVariable Long screenId) {
         List<Show> shows = showService.getShowsByScreen(screenId);
