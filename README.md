@@ -57,7 +57,7 @@ The frontend that consumes this API is **CineStage** (built separately, generate
 | Repo | Description |
 |---|---|
 | **Backend** (this repo) | Spring Boot REST API — bookings, scheduling, TMDB integration |
-| **Frontend** | [CineStage Frontend](<paste-frontend-repo-link-here>) — Next.js client consuming this API |
+| **Frontend** | [CineStage Frontend](https://github.com/Soumadeep1221/CineStage-Frontend) — Next.js client consuming this API |
 
 **Frontend Tech Stack:**
 
