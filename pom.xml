@@ -98,6 +98,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>BMS-System</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
