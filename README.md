@@ -147,9 +147,3 @@ tmdb.api-key=${TMDB_API_KEY}
 
 - Role-based access control (admin vs. regular user) is not yet enforced at the backend level
 - Auth token issuance is not yet implemented
-
----
-
-## 👤 Author
-
-Built by **Soumadeep** — documenting the full build process on [LinkedIn](https://linkedin.com/in/soumadeep-dey-).
