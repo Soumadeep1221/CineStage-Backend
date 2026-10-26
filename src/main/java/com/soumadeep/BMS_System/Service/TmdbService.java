@@ -18,9 +18,7 @@ public class TmdbService {
 
     private final RestClient restClient = RestClient.builder()
             .baseUrl("https://api.themoviedb.org/3")
-            .requestFactory(
-                    new HttpComponentsClientHttpRequestFactory()
-            )
+            .requestFactory(new HttpComponentsClientHttpRequestFactory())
             .build();
 
     public String getPosterUrl(String title, LocalDate releaseDate) {
@@ -38,32 +36,24 @@ public class TmdbService {
                                 releaseDate.getYear()
                         );
                     }
-
                     return uriBuilder.build();
                 })
                 .retrieve()
                 .body(JsonNode.class);
 
         if (response == null || !response.has("results")) {
-            throw new RuntimeException(
-                    "Could not search TMDB for movie: " + title
-            );
+            throw new RuntimeException("Could not search TMDB for movie: " + title);
         }
 
         JsonNode results = response.get("results");
 
         if (!results.isArray() || results.isEmpty()) {
-            throw new RuntimeException(
-                    "Movie not found on TMDB: " + title
-            );
+            throw new RuntimeException("Movie not found on TMDB: " + title);
         }
 
         JsonNode selectedMovie = null;
-
         for (JsonNode movie : results) {
-
-            String tmdbTitle =
-                    movie.path("title").asText();
+            String tmdbTitle = movie.path("title").asString(null);
 
             if (tmdbTitle.equalsIgnoreCase(title)) {
                 selectedMovie = movie;
@@ -75,13 +65,10 @@ public class TmdbService {
             selectedMovie = results.get(0);
         }
 
-        String posterPath =
-                selectedMovie.path("poster_path").asText(null);
+        String posterPath = selectedMovie.path("poster_path").asString(null);
 
         if (posterPath == null || posterPath.isBlank()) {
-            throw new RuntimeException(
-                    "No poster found on TMDB for movie: " + title
-            );
+            throw new RuntimeException("No poster found on TMDB for movie: " + title);
         }
 
         return "https://image.tmdb.org/t/p/w500" + posterPath;

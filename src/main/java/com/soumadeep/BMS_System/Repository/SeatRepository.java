@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface SeatRepository extends JpaRepository<Seat, Long> {
 
+    // select * from seat where screen_id = ?
     List<Seat> findByScreenId(Long screenId);
 
 }
